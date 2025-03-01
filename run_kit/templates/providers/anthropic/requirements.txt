@@ -1,0 +1,2 @@
+# Anthropic (Claude) requirements
+anthropic>=0.18.0

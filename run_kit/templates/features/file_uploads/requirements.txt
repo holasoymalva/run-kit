@@ -1,0 +1,4 @@
+# File upload processing requirements
+pandas>=2.0.0
+pypdf>=3.7.0
+openpyxl>=3.1.0  # For Excel support

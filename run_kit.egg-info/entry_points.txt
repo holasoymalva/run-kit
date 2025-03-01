@@ -1,0 +1,2 @@
+[console_scripts]
+run-kit = run_kit.cli:main
