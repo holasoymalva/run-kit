@@ -9,10 +9,6 @@
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/streamlit-1.24+-ff4b4b.svg)](https://streamlit.io/)
 
-<p align="center">
-  <img src="https://via.placeholder.com/800x400?text=RunKit+Workflow" alt="RunKit Workflow" width="800"/>
-</p>
-
 **Deploy AI applications in minutes, not days.**
 
 </div>
