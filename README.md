@@ -40,12 +40,6 @@ Think of it as "Vue CLI meets AI development" – an interactive project generat
 - **🧠 Memory & Caching**: Optimized for performance and cost-effectiveness
 - **📊 Visualization Ready**: Charts and data displays right out of the box
 
-## 📊 Demo
-
-<p align="center">
-  <img src="https://via.placeholder.com/800x500?text=RunKit+Demo+GIF" alt="RunKit Demo" width="800"/>
-</p>
-
 ## 🚀 Quick Start
 
 ### Installation
