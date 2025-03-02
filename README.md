@@ -161,6 +161,6 @@ If you find RunKit useful, please consider:
 ---
 
 <div align="center">
-  <p>Built with ❤️ in Silicon Valley</p>
+  <p>Built with ❤️ in Mexico City</p>
   <p>© 2025 RunKit Team</p>
 </div>
