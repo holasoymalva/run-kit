@@ -2,6 +2,13 @@
 Constants used throughout the RunKit package.
 """
 
+import os
+import sys
+from pathlib import Path
+
+# Get the package directory (absolute path)
+PACKAGE_DIR = os.path.dirname(os.path.abspath(__file__))
+
 # Provider options
 PROVIDER_ANTHROPIC = "Anthropic (Claude)"
 PROVIDER_GEMINI = "Google (Gemini)"
@@ -41,11 +48,25 @@ PROJECT_TYPES = [
     PROJECT_SPECIALIZED_AGENT
 ]
 
-# Template paths
-TEMPLATE_BASE_PATH = "templates/base"
-TEMPLATE_PROVIDERS_PATH = "templates/providers"
-TEMPLATE_FEATURES_PATH = "templates/features"
-TEMPLATE_PROJECT_TYPES_PATH = "project_types"
+# Template paths (absolute paths)
+TEMPLATE_BASE_PATH = os.path.join(PACKAGE_DIR, "templates", "base")
+TEMPLATE_PROVIDERS_PATH = os.path.join(PACKAGE_DIR, "templates", "providers")
+TEMPLATE_FEATURES_PATH = os.path.join(PACKAGE_DIR, "templates", "features")
+TEMPLATE_PROJECT_TYPES_PATH = os.path.join(PACKAGE_DIR, "project_types")
+
+# Debug information - print important paths
+def print_debug_info():
+    print(f"Package directory: {PACKAGE_DIR}")
+    print(f"Template base path: {TEMPLATE_BASE_PATH}")
+    print(f"Template providers path: {TEMPLATE_PROVIDERS_PATH}")
+    print(f"Template features path: {TEMPLATE_FEATURES_PATH}")
+    print(f"Template project types path: {TEMPLATE_PROJECT_TYPES_PATH}")
+    
+    # Check if directories exist
+    print(f"Template base path exists: {os.path.exists(TEMPLATE_BASE_PATH)}")
+    print(f"Template providers path exists: {os.path.exists(TEMPLATE_PROVIDERS_PATH)}")
+    print(f"Template features path exists: {os.path.exists(TEMPLATE_FEATURES_PATH)}")
+    print(f"Template project types path exists: {os.path.exists(TEMPLATE_PROJECT_TYPES_PATH)}")
 
 # File structure templates
 STRUCTURE_BASE = [

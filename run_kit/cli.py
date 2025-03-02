@@ -9,7 +9,7 @@ import inquirer
 from colorama import init, Fore, Style
 
 from run_kit.constants import (
-    PROVIDERS, FEATURES, PROJECT_TYPES, BANNER
+    PROVIDERS, FEATURES, PROJECT_TYPES, BANNER, print_debug_info
 )
 from run_kit.utils.files import generate_project_structure
 
@@ -65,7 +65,8 @@ def interactive_setup():
 @click.option('--provider', type=click.Choice(PROVIDERS), help='LLM provider to use')
 @click.option('--features', multiple=True, type=click.Choice(FEATURES), help='Additional features to include')
 @click.option('--project-type', 'project_type', type=click.Choice(PROJECT_TYPES), help='Type of project to create')
-def main(project_name, provider, features, project_type):
+@click.option('--debug/--no-debug', default=False, help='Enable debug information')
+def main(project_name, provider, features, project_type, debug):
     """
     Initialize a new AI project with RunKit.
     
@@ -73,6 +74,10 @@ def main(project_name, provider, features, project_type):
     """
     print_banner()
     print_info(f"Initializing AI project: {project_name}")
+    
+    # Print debug information if requested
+    if debug:
+        print_debug_info()
     
     # If not all options are provided, run interactive setup
     if not all([provider, features, project_type]):
@@ -116,6 +121,10 @@ def main(project_name, provider, features, project_type):
         print("streamlit run app.py")
     except Exception as e:
         print_error(f"Error creating project: {str(e)}")
+        # Print more detailed error information in debug mode
+        if debug:
+            import traceback
+            traceback.print_exc()
         sys.exit(1)
 
 if __name__ == "__main__":
