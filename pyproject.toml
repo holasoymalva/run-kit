@@ -7,8 +7,10 @@ name = "run-kit"
 version = "0.1.0"
 description = "A CLI tool to quickly set up AI projects."
 readme = "README.md"
-authors = [{ name = "holasoymalva", email = "alquimista3301@gmail.com.com" }]
-license = { file = "LICENSE" }
+authors = [{ name = "holasoymalva", email = "alquimista3301@gmail.com" }]
+license = { text = "MIT" }
+requires-python = ">=3.9"
+
 dependencies = [
     "altair>=5.4.1",
     "annotated-types>=0.7.0",
@@ -48,7 +50,6 @@ dependencies = [
     "packaging>=24.1",
     "pandas>=2.2.3",
     "pillow>=10.4.0",
-    "pip>=24.3.1",
     "protobuf>=5.28.3",
     "pyarrow>=18.0.0",
     "pydantic>=2.9.2",
@@ -65,7 +66,6 @@ dependencies = [
     "requests>=2.32.3",
     "rich>=13.9.3",
     "rpds-py>=0.20.0",
-    "run-kit>=0.1.0",
     "runs>=1.2.2",
     "six>=1.16.0",
     "smmap>=5.0.1",
@@ -83,5 +83,24 @@ dependencies = [
     "xmod>=1.8.1"
 ]
 
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11"
+]
+
+keywords = ["ai", "llm", "anthropic", "gemini", "ollama", "streamlit", "generator"]
+
+[project.urls]
+Homepage = "https://github.com/holasoymalva/run-kit"
+Bug-Tracker = "https://github.com/holasoymalva/run-kit/issues"
+
 [project.scripts]
 run-kit = "run_kit.cli:main"
+
+[tool.setuptools]
+packages = ["run_kit"]
